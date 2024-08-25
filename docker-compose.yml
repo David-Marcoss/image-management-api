@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  psqlDb:
+    image: postgres:latest
+    container_name: postgres-auth
+    environment:
+      POSTGRES_DB: AuthDB
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+    volumes:
+      - auth_db_volume:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-docker-postgres
+    ports:
+      - '3000:3000'
+    depends_on:
+      - psqlDb
+    volumes:
+      - ./src:/app/src
+
+volumes:
+  auth_db_volume:
