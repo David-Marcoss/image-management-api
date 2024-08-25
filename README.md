@@ -1,10 +1,9 @@
-## 
-<div style="display: flex; align-items: center;">
-  <span style="margin-left: 10px; font-size: 24px; font-weight: bold;">Sistema de API de Gerenciamento de Imagens com Cloudinary</span>
-</div>
-<hr>
+# API de Gerenciamento de Imagens com Cloudinary
 
 Esta aplicação é um sistema de Gestão de Imagens que permite aos usuários armazenar e gerenciar suas imagens de forma eficiente. As imagens são carregadas para a nuvem por meio da integração com o serviço Cloudinary, garantindo armazenamento seguro e acessível. O sistema inclui uma funcionalidade de autenticação, permitindo que cada usuário crie uma conta e tenha controle exclusivo sobre o gerenciamento de suas próprias imagens.
+
+<img src="./public/image.png" alt="home" style="width: 100%;"/>
+
 
 ## Arquitetura da Aplicação
 
@@ -49,11 +48,6 @@ A arquitetura da aplicação é composta por uma API REST desenvolvida com o fra
     docker compose up --build
     ```
 
-2. Se tudo ocorrer bem, a API estará disponível na rota:
-    ```
-    http://localhost:3000/
-    ```
-
 ### Executando o Projeto sem Docker
 
 1. Para executar sem Docker, você deve ter o banco de dados PostgreSQL instalado e configurado em sua máquina. Insira as credenciais de acesso ao seu banco de dados nas seguintes variáveis no arquivo **.env**:
@@ -84,7 +78,16 @@ A arquitetura da aplicação é composta por uma API REST desenvolvida com o fra
     npm run start
     ```
 
-5. Se tudo ocorrer bem, a API estará disponível na rota:
+## Se tudo ocorrer bem , a API estará disponível:
+
+- Rota principal da api
+
     ```
     http://localhost:3000/
+    ```
+
+- Para utilizar a API, você pode acessar a documentação disponível. Lá, você encontrará todas as rotas do sistema e suas respectivas instruções de execução, Acesse a documentação na seguinte rota:
+
+    ```
+        http://localhost:3000/api#/
     ```
