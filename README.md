@@ -80,7 +80,7 @@ A arquitetura da aplicação é composta por uma API REST desenvolvida com o fra
 
 ## Se tudo ocorrer bem , a API estará disponível:
 
-- Rota principal da api
+- Rota principal da API
 
     ```
     http://localhost:3000/
@@ -91,3 +91,5 @@ A arquitetura da aplicação é composta por uma API REST desenvolvida com o fra
     ```
         http://localhost:3000/api#/
     ```
+
+- Você pode também testar a api via postman, no arquivo <b>public/postman/</b> você encontrará um arquivo com uma Collection com as rotas configuradas para teste no postman.

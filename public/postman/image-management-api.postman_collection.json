@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "b8fc330c-6cf5-4ff9-b0b4-cd006d2e7f46",
+		"name": "image-management-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27101951"
+	},
+	"item": [
+		{
+			"name": "images",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3NWQ0OWI5Zi00MDIzLTRiNjYtYmI3My0wNzdlY2M3MzIzY2YiLCJpYXQiOjE3MjQ2MDc0MjIsImV4cCI6MTcyNDYxMTAyMn0.ssZu9_QlDJzYd6XHjF8lD2u-7twD9xbvxhbuvpB_dpc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "bb7c55b4-f0ce-4f6b-8335-379c2dce250d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "url",
+									"type": "file",
+									"src": "/home/davidmarcos/Downloads/image.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/images",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzYyNzkwMS1kY2Y4LTQ2NjQtYmExYy01MDRlYjBjMzQ2YTMiLCJpYXQiOjE3MjQ1OTA2NjYsImV4cCI6MTcyNDU5NDI2Nn0.mb1CFTKtMJgGh9UM3uaXrG2Ru-YLWnoBhvVKSGfiR-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 76840702eaa0517aaba4bba6d588336e779162e4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/images/f2513021-8e4c-4c3f-b443-0f7bf7dcb88f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"f2513021-8e4c-4c3f-b443-0f7bf7dcb88f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzYyNzkwMS1kY2Y4LTQ2NjQtYmExYy01MDRlYjBjMzQ2YTMiLCJpYXQiOjE3MjQ1OTA2NjYsImV4cCI6MTcyNDU5NDI2Nn0.mb1CFTKtMJgGh9UM3uaXrG2Ru-YLWnoBhvVKSGfiR-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 76840702eaa0517aaba4bba6d588336e779162e4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"type": "file",
+									"src": "/home/davidmarcos/Downloads/capa.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/images/7f4e97a9-c331-42fb-b06c-9fcf4ffb1d16",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"7f4e97a9-c331-42fb-b06c-9fcf4ffb1d16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzYyNzkwMS1kY2Y4LTQ2NjQtYmExYy01MDRlYjBjMzQ2YTMiLCJpYXQiOjE3MjQ1OTQ3NzgsImV4cCI6MTcyNDU5ODM3OH0.oRyF1sUBhZhi3KmhiOKzOrD5MY3QFiBSAqloiGZ3wlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 76840702eaa0517aaba4bba6d588336e779162e4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/v1/images",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzYyNzkwMS1kY2Y4LTQ2NjQtYmExYy01MDRlYjBjMzQ2YTMiLCJpYXQiOjE3MjQ1OTA2NjYsImV4cCI6MTcyNDU5NDI2Nn0.mb1CFTKtMJgGh9UM3uaXrG2Ru-YLWnoBhvVKSGfiR-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/images/f2513021-8e4c-4c3f-b443-0f7bf7dcb88f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"f2513021-8e4c-4c3f-b443-0f7bf7dcb88f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "veryfi-data-images",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzYyNzkwMS1kY2Y4LTQ2NjQtYmExYy01MDRlYjBjMzQ2YTMiLCJpYXQiOjE3MjQ1OTQ3NzgsImV4cCI6MTcyNDU5ODM3OH0.oRyF1sUBhZhi3KmhiOKzOrD5MY3QFiBSAqloiGZ3wlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/images/verify-data",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"verify-data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"davis\",\n    \"email\": \"davis@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/vi/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"vi",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "singIn",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"davis@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/auth/singIn",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"singIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
